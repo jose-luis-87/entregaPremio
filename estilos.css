@@ -1,0 +1,812 @@
+* {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: "CHINESE TAKE AWAY";
+    src: url("FONT/CHINESETAKEAWAY.ttf");
+}
+
+#back-dinamic {
+    position: absolute;
+    z-index: -10;
+}
+
+#confetti-holder {
+    position: absolute;
+    z-index: 30;
+}
+
+
+/* ANIMACIÓNES GLOBOS BLACK */
+
+.cantoya0 {
+    height: 279px;
+    width: 200px;
+    background: url(img/sprite-cantoya-gde.png);
+    left: 0px;
+    animation: globo0 4s steps(2) infinite;
+    z-index: 1;
+}
+
+@keyframes globo0 {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: 400px;
+    }
+}
+
+.cantoyabox0 {
+    position: absolute;
+    display: block;
+    opacity: 1;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    /* bottom: -160px; */
+    animation: box1 27s infinite linear;
+}
+
+@keyframes box0 {
+    0% {
+        transform: translateY(1300px);
+    }
+    100% {
+        transform: translateY(-300px);
+    }
+}
+
+.cantoya1 {
+    height: 178px;
+    width: 127px;
+    background: url(img/sprite-cantoya.png);
+    left: 200px;
+    animation: globo 3s steps(2) infinite;
+    z-index: 1;
+}
+
+@keyframes globo {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: 254px;
+    }
+}
+
+.cantoyabox1 {
+    position: absolute;
+    display: block;
+    opacity: 1;
+    left: 200px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    /* bottom: -160px; */
+    -webkit-animation: box1 25s infinite linear;
+    -moz-animation: box1 25s infinite linear;
+    animation: box1 23s infinite linear;
+}
+
+@keyframes box1 {
+    0% {
+        transform: translateY(1300px);
+    }
+    100% {
+        transform: translateY(-300px);
+    }
+}
+
+.cantoya2 {
+    height: 140px;
+    width: 100px;
+    background: url(img/sprite-cantoya2.png);
+    animation: globo2 5s steps(2) infinite;
+    z-index: 1;
+}
+
+@keyframes globo2 {
+    0% {
+        background-position: 200px;
+    }
+    100% {
+        background-position: 0px;
+    }
+}
+
+.cantoyabox2 {
+    position: absolute;
+    list-style: none;
+    display: block;
+    opacity: 1;
+    left: 400px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    /* bottom: -160px; */
+    animation: box2 23s infinite linear;
+    animation-delay: 3s;
+}
+
+@keyframes box2 {
+    0% {
+        transform: translateY(1300px);
+    }
+    100% {
+        transform: translateY(-300px);
+    }
+}
+
+.cantoya3 {
+    height: 126px;
+    width: 90px;
+    background: url(img/sprite-cantoya3.png);
+    animation: globo3 6s steps(2) infinite;
+    z-index: 1;
+}
+
+@keyframes globo3 {
+    0% {
+        background-position: 180px;
+    }
+    100% {
+        background-position: 0px;
+    }
+}
+
+.cantoyabox3 {
+    position: absolute;
+    list-style: none;
+    display: block;
+    opacity: 1;
+    left: 600px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    /* bottom: -160px; */
+    animation: box3 27s infinite linear;
+    animation-delay: 1s;
+}
+
+@keyframes box3 {
+    0% {
+        transform: translateY(1300px);
+    }
+    100% {
+        transform: translateY(-300px);
+    }
+}
+
+.cantoya4 {
+    height: 126px;
+    width: 90px;
+    background: url(img/sprite-cantoya3.png);
+    animation: globo4 4s steps(2) infinite;
+    z-index: 1;
+}
+
+@keyframes globo4 {
+    0% {
+        background-position: 180px;
+    }
+    100% {
+        background-position: 0px;
+    }
+}
+
+.cantoyabox4 {
+    position: absolute;
+    display: block;
+    opacity: 1;
+    left: 800px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* bottom: -160px; */
+    animation: box4 22s infinite linear;
+    animation-delay: 2s;
+}
+
+@keyframes box4 {
+    0% {
+        transform: translateY(1300px);
+    }
+    100% {
+        transform: translateY(-300px);
+    }
+}
+
+.cantoya5 {
+    height: 126px;
+    width: 90px;
+    background: url(img/sprite-cantoya3.png);
+    animation: globo5 2s steps(2) infinite;
+    z-index: 1;
+}
+
+@keyframes globo5 {
+    0% {
+        background-position: 180px;
+    }
+    100% {
+        background-position: 0px;
+    }
+}
+
+.cantoyabox5 {
+    position: absolute;
+    display: block;
+    opacity: 1;
+    left: 1000px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    /* bottom: -160px; */
+    animation: box5 27s infinite linear;
+    animation-delay: 3s;
+}
+
+@keyframes box5 {
+    0% {
+        transform: translateY(1300px);
+    }
+    100% {
+        transform: translateY(-300px);
+    }
+}
+
+.cantoya6 {
+    height: 178px;
+    width: 127px;
+    background: url(img/sprite-cantoya.png);
+    animation: globo6 4s steps(2) infinite;
+    z-index: 1;
+}
+
+@keyframes globo6 {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: 254px;
+    }
+}
+
+.cantoyabox6 {
+    position: absolute;
+    display: block;
+    opacity: 1;
+    left: 1200px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    /* bottom: -160px; */
+    animation: box6 27s infinite linear;
+}
+
+@keyframes box6 {
+    0% {
+        transform: translateY(1300px);
+    }
+    100% {
+        transform: translateY(-300px);
+    }
+}
+
+.cantoya7 {
+    height: 140px;
+    width: 100px;
+    background: url(img/sprite-cantoya2.png);
+    animation: globo7 3s steps(2) infinite;
+    z-index: 1;
+}
+
+@keyframes globo7 {
+    0% {
+        background-position: 200px;
+    }
+    100% {
+        background-position: 0px;
+    }
+}
+
+.cantoyabox7 {
+    position: absolute;
+    display: block;
+    opacity: 1;
+    left: 1400px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    /* bottom: -160px; */
+    animation: box7 23s infinite linear;
+    animation-delay: 2s;
+}
+
+@keyframes box7 {
+    0% {
+        transform: translateY(1300px);
+    }
+    100% {
+        transform: translateY(-300px);
+    }
+}
+
+.cantoya8 {
+    height: 126px;
+    width: 90px;
+    background: url(img/sprite-cantoya3.png);
+    animation: globo8 4s steps(2) infinite;
+    z-index: 1;
+}
+
+@keyframes globo8 {
+    0% {
+        background-position: 180px;
+    }
+    100% {
+        background-position: 0px;
+    }
+}
+
+.cantoyabox8 {
+    position: absolute;
+    display: block;
+    opacity: 1;
+    left: 1600px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    /* bottom: -160px; */
+    animation: box8 23s infinite linear;
+    animation-delay: 1s;
+}
+
+@keyframes box8 {
+    0% {
+        transform: translateY(1300px);
+    }
+    100% {
+        transform: translateY(-300px);
+    }
+}
+
+.cantoya9 {
+    height: 279px;
+    width: 200px;
+    background: url(img/sprite-cantoya-gde.png);
+    left: 1780px;
+    animation: globo9 3s steps(2) infinite;
+    z-index: 1;
+}
+
+@keyframes globo9 {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: 400px;
+    }
+}
+
+.cantoyabox9 {
+    position: absolute;
+    display: block;
+    opacity: 1;
+    left: 1780px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    /* bottom: -160px; */
+    animation: box9 23s infinite linear;
+}
+
+@keyframes box9 {
+    0% {
+        transform: translateY(1300px);
+    }
+    100% {
+        transform: translateY(-300px);
+    }
+}
+
+
+/* TÍTULO */
+
+.title {
+    background: url(img/title.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: 900px;
+    width: 1920px;
+    height: 600px;
+    position: relative;
+    display: block;
+    z-index: 10;
+}
+
+.title.skip {
+    transition: 1.5s ease-out;
+    opacity: 0;
+}
+
+
+/* PISO */
+
+.floor {
+    background: url(img/floor.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    width: 1920px;
+    height: 619px;
+    position: relative;
+    margin-top: -100px;
+    display: block;
+    z-index: 1;
+}
+
+.floor.skip {
+    transition: 1.5s ease-out;
+    opacity: 0;
+}
+
+
+/* SPRITE DRAGON COVER */
+
+.dragon {
+    position: relative;
+    height: 502px;
+    width: 312px;
+    top: -610px;
+    left: 830px;
+    background: url(img/spriteDragon.png);
+    animation: dragon 1.2s steps(4) infinite reverse;
+    z-index: 5;
+}
+
+.dragon.skip {
+    transition: 1s ease-out;
+    opacity: 0;
+}
+
+@keyframes dragon {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: 1248px;
+    }
+}
+
+
+/* FORMATO TEXTOS */
+
+.pr {
+    font-family: "CHINESE TAKE AWAY";
+    color: aliceblue;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 180px;
+    text-shadow: 3px 3px 4px black;
+}
+
+
+/* SPRITES NUBES AMULETOS */
+
+.sprtNube1 {
+    height: 214px;
+    width: 417px;
+    margin-top: 20px;
+    margin-left: 50px;
+    background: url(img/nubeSprite.png);
+    animation: nube 3s steps(3) infinite;
+    position: absolute;
+    z-index: 2;
+}
+
+.sprtNube2 {
+    height: 214px;
+    width: 417px;
+    margin-top: -30px;
+    margin-left: 100px;
+    background: url(img/nubeSprite.png);
+    animation: nube 3s steps(3) infinite;
+    z-index: 1;
+}
+
+@keyframes nube {
+    0% {
+        background-position-Y: 0px;
+        transform: translateY(5px)
+    }
+    100% {
+        background-position-Y: 642px;
+        transform: translateY(-5px)
+    }
+}
+
+
+/* CONTAINERS AMULETOS */
+
+.boxnube1 {
+    background: url(img/gato.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    opacity: 1;
+    top: 0px;
+    left: 100px;
+    width: 467px;
+    height: 427%;
+    z-index: 35;
+    animation: amul 5s infinite ease-in-out;
+    animation-delay: 1s;
+}
+
+.boxnube1.move {
+    transition: 2.5s ease-in;
+    top: 500px;
+    left: 730px;
+    animation: none;
+}
+
+.boxnube1.gray {
+    filter: grayscale(100%);
+    left: 50px;
+    transition: 1s linear;
+}
+
+@keyframes amul {
+    0% {
+        transform: translateX(10px);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+.boxnube2 {
+    background: url(img/peces.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    opacity: 1;
+    top: 400px;
+    left: 250px;
+    width: 616px;
+    height: 458px;
+    z-index: 35;
+    animation: amul 5s infinite ease-in-out;
+    animation-delay: 1s;
+}
+
+.boxnube2.move {
+    transition: 2.5s ease-in;
+    top: 500px;
+    left: 670px;
+    animation: none;
+}
+
+.boxnube2.gray {
+    filter: grayscale(100%);
+    left: 150px;
+    transition: 1s linear;
+}
+
+.boxnube3 {
+    background: url(img/dragon.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    opacity: 1;
+    top: 0px;
+    right: 80px;
+    width: 530px;
+    height: 445px;
+    z-index: 35;
+    animation: amul3 5s infinite ease-in-out;
+    animation-delay: 1s;
+}
+
+.boxnube3.move {
+    transition: 2.5s ease-in;
+    top: 500px;
+    right: 670px;
+    animation: none;
+}
+
+.boxnube3.gray {
+    filter: grayscale(100%);
+    right: 0px;
+    transition: 1s linear;
+}
+
+@keyframes amul3 {
+    0% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(-10px);
+    }
+}
+
+.boxnube4 {
+    background: url(img/rata.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    opacity: 1;
+    top: 400px;
+    right: 150px;
+    width: 628px;
+    height: 393px;
+    z-index: 35;
+    animation: amul3 5s infinite ease-in-out;
+    animation-delay: 1s;
+}
+
+.boxnube4.move {
+    transition: 2.5s ease-in;
+    top: 500px;
+    right: 640px;
+    animation: none;
+}
+
+.boxnube4.gray {
+    filter: grayscale(100%);
+    right: 50px;
+    transition: 1s linear;
+}
+
+@keyframes amul3 {
+    0% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(-10px);
+    }
+}
+
+
+/* ANIMACIÓN GLOBO DRAGON */
+
+.globoDragon {
+    background: url(img/globoDragon.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    top: 2000px;
+    left: 300px;
+    width: 1326px;
+    height: 1776px;
+    z-index: 3;
+}
+
+.globoDragon.anim {
+    transition: ease;
+    top: -900px;
+    opacity: 1;
+    animation: globoDragon 3.5s 1 linear;
+}
+
+@keyframes globoDragon {
+    0% {
+        top: 2000px;
+    }
+    75% {
+        top: -1000px;
+    }
+    80% {
+        top: -880px;
+    }
+    90% {
+        top: -920px;
+    }
+    100% {
+        top: -900px;
+    }
+}
+
+
+/* BOTONES INTERFACE */
+
+.btnSalir {
+    width: 140px !important;
+    height: 140px !important;
+    bottom: 35px;
+    right: 40px;
+    margin-top: 30px;
+    outline: none;
+    border: none;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 102;
+}
+
+.btnVolver {
+    width: 180px !important;
+    height: 230px;
+    bottom: 355px;
+    /* right: 30px; */
+    margin-top: 30px;
+    outline: none;
+    border: none;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 101
+}
+
+.btnMenu {
+    width: 140px !important;
+    height: 140px !important;
+    bottom: 35px;
+    /* right: 45px; */
+    margin-top: 30px;
+    margin-left: 30px;
+    outline: none;
+    border: none;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 100;
+}
+
+
+/* MODAL TIME OUT */
+
+#dlgAvisoTimeOut {
+    height: 1080px !important;
+    /*display:none;*/
+}
+
+#btn-AceptarCustom {
+    /*float:right;*/
+    width: 300px;
+    height: 90px;
+    margin-top: 0px !important;
+    margin-right: 0px !important;
+    background-image: url('img/ir_kiosco.jpg');
+    background-size: 100%;
+    position: absolute;
+    top: 800px;
+    right: 300px;
+}
+
+.ui-widget-content {
+    background-color: transparent;
+}
+
+.ui-widget.ui-widget-content {
+    border: 0;
+    top: 0px !important;
+}
+
+.ui-dialog {
+    padding: 0px;
+}

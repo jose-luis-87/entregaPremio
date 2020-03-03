@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Premio</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <canvas id="back-dinamic" width="1920" height="1080"></canvas>
+    <canvas id="confetti-holder" width="1920" height="1080"></canvas>
+
+    <div class="cantoyabox0">
+        <div class="cantoya0"></div>
+    </div>
+    <div class="cantoyabox1">
+        <div class="cantoya1"></div>
+    </div>
+    <div class="cantoyabox2">
+        <div class="cantoya2"></div>
+    </div>
+    <div class="cantoyabox3">
+        <div class="cantoya3"></div>
+    </div>
+    <div class="cantoyabox4">
+        <div class="cantoya4"></div>
+    </div>
+    <div class="cantoyabox5">
+        <div class="cantoya5"></div>
+    </div>
+    <div class="cantoyabox6">
+        <div class="cantoya6"></div>
+    </div>
+    <div class="cantoyabox7">
+        <div class="cantoya7"></div>
+    </div>
+    <div class="cantoyabox8">
+        <div class="cantoya8"></div>
+    </div>
+    <div class="cantoyabox9">
+        <div class="cantoya9"></div>
+    </div>
+
+    <div class="title" id="title">
+        <div class="pr" id="instruct" style="margin-top: 440px;">TOCA EL AMULETO QUE TE TRAERA FORTUNA</div>
+    </div>
+    <div class="floor" id="floor"></div>
+    <div class="dragon" id="dragon"></div>
+
+    <div class="boxnube1" id="boxnube1">
+        <div class="pr" id="rec1"></div>
+        <div class="sprtNube1" id="sprtNube1"></div>
+    </div>
+
+    <div class="boxnube2" id="boxnube2">
+        <div class="pr" id="rec2"></div>
+        <div class="sprtNube1"></div>
+    </div>
+
+    <div class="boxnube3" id="boxnube3">
+        <div class="pr" id="rec3"></div>
+        <div class="sprtNube1"></div>
+    </div>
+
+    <div class="boxnube4" id="boxnube4">
+        <div class="pr" id="rec4"></div>
+        <div class="sprtNube2"></div>
+    </div>
+
+    <div class="globoDragon" id="globoDragon">
+        <div class="pr" id="premio" style="margin-top: 1360px; font-size: 42px;"></div>
+    </div>
+
+    <input id="btnSalir" class="btnSalir" style="background-image: url('http://terminalmexcal.cdrsbg.com/Content/images/salir.png');" type="button" value="" />
+    <input id="btnVolver" class="btnVolver" style="background-image: url('http://terminalmexcal.cdrsbg.com/Content/images/volver.png');" type="button" value="" />
+    <input id="btnMenu" class="btnMenu" style="background-image: url('http://terminalmexcal.cdrsbg.com/Content/images/menu.png');" type="button" value="" />
+
+    <!-- <div id="dlgAvisoTimeOut" class="dialogclasscustomJuego" style="background-image: url(img/timeout-jako.jpg); overflow: hidden; background-color: transparent;">
+        <input id="btn-AceptarCustom" class="btnNoSocio" style="float:right; margin-top:800px; margin-right: 300px; width: 300px; height:90px;  background-image: url('img/ir_kiosco.jpg'); background-size: 100%;" type="button" value="">
+    </div> -->
+
+</body>
+<script src="jquery-3.4.1.min.js"></script>
+<script src="granim.min.js"></script>
+<script src="index.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="app.js"></script>
+<!-- <script>
+    var IdTerminal = "";
+    var IdSala = "";
+    var Puesto = "";
+    var NombreSala = "";
+    var NumeroTarjeta = "";
+    var NumTxn = "";
+    // var PuntosRecompensa = "";
+    var DescripcionRecompensa = "";
+    var TipoRecompensa = "";
+    var Entorno = "";
+    var urlconstruida = "";
+
+    function RecogeParametros(parametro) {
+        parametro = parametro.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + parametro + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    $(document).ready(function() {
+
+        IdTerminal = RecogeParametros("IdTerminal");
+        IdSala = RecogeParametros("IdSala");
+        Puesto = RecogeParametros("Puesto");
+        NombreSala = RecogeParametros("NombreSala");
+        NumeroTarjeta = RecogeParametros("NumeroTarjeta");
+        NumTxn = RecogeParametros("NumTxn");
+        // PuntosRecompensa = RecogeParametros("PuntosRecompensa");
+        DescripcionRecompensa = RecogeParametros("DescripcionRecompensa");
+        TipoRecompensa = RecogeParametros("TipoRecompensa");
+        Entorno = RecogeParametros("Entorno");
+
+        if (IdTerminal == "" || IdSala == "" || Puesto == "" || NombreSala == "") {
+            // Sustitur por la pagina de error que tengais creado, 5 segundos y al index del terminal
+            var urlconstruida = "error.html";
+            location.href = urlconstruida;
+        }
+
+        $("#btnSalir").click(function() {
+            var IdTerminal = "";
+            IdTerminal = RecogeParametros("IdTerminal");
+            //var urlconstruida = "http://terminalmexcal.cdrsbg.com";
+            var urlconstruida = "https://terminalmex.cdrsbg.com/";
+            if (Entorno == 0) {
+                urlconstruida = "http://terminalmexcal.cdrsbg.com/";
+            } else if (Entorno == 2) {
+                urlconstruida = "http://localhost/";
+            }
+
+        });
+
+        $("#boxnube1").click(function() {
+            var Descripcion = RecogeParametros("DescripcionRecompensa");
+            $("#pointH11").html(Descripcion);
+        });
+
+        $("#boxnube2").click(function() {
+            var Descripcion = RecogeParametros("DescripcionRecompensa");
+            $("#pointH12").html(Descripcion);
+        });
+
+        $("#boxnube3").click(function() {
+            var Descripcion = RecogeParametros("DescripcionRecompensa");
+            $("#pointH13").html(Descripcion);
+        });
+
+        $("#boxnube4").click(function() {
+            var Descripcion = RecogeParametros("DescripcionRecompensa");
+            $("#pointH14").html(Descripcion);
+        });
+
+
+        $("#btnMenu").click(function() {
+
+            IdTerminal = RecogeParametros("IdTerminal");
+            IdSala = RecogeParametros("IdSala");
+            Puesto = RecogeParametros("Puesto");
+            NombreSala = RecogeParametros("NombreSala");
+            NumeroTarjeta = RecogeParametros("NumeroTarjeta");
+            NumTxn = RecogeParametros("NumTxn");
+            // PuntosRecompensa = RecogeParametros("PuntosRecompensa");
+            TipoRecompensa = RecogeParametros("DescripcionRecompensa");
+            Entorno = RecogeParametros("Entorno");
+
+            var urlconstruida = "https://terminalmex.cdrsbg.com/Menu/";
+            if (Entorno == 0) {
+                urlconstruida = "http://terminalmexcal.cdrsbg.com/Menu/";
+            } else if (Entorno == 2) {
+                urlconstruida = "http://localhost/Menu/";
+            }
+            urlconstruida += "?NumeroTarjeta=" + NumeroTarjeta + "&IdSala=" + IdSala + "&NombreSala=" +
+                NombreSala + "&Puesto=" + Puesto + "&IdTerminal=" + IdTerminal + "&ActualizaPuntos=2";
+            location.href = urlconstruida;
+        });
+
+        $("#btnVolver").click(function() {
+
+            IdTerminal = RecogeParametros("IdTerminal");
+            IdSala = RecogeParametros("IdSala");
+            Puesto = RecogeParametros("Puesto");
+            NombreSala = RecogeParametros("NombreSala");
+            NumeroTarjeta = RecogeParametros("NumeroTarjeta");
+            NumTxn = RecogeParametros("NumTxn");
+            // PuntosRecompensa = RecogeParametros("PuntosRecompensa");
+            RecopensaExt = RecogeParametros("RecompensaExt");
+            TipoRecompensa = RecogeParametros("DescripcionRecompensa");
+            Entorno = RecogeParametros("Entorno");
+
+            var urlconstruida = "https://terminalmex.cdrsbg.com/Menu/";
+            if (Entorno == 0) {
+                urlconstruida = "http://terminalmexcal.cdrsbg.com/Menu/";
+            } else if (Entorno == 2) {
+                urlconstruida = "http://localhost/Menu/";
+            }
+
+            urlconstruida += "?NumeroTarjeta=" + NumeroTarjeta + "&IdSala=" + IdSala + "&NombreSala=" +
+                NombreSala + "&Puesto=" + Puesto + "&IdTerminal=" + IdTerminal + "&ActualizaPuntos=2";
+            location.href = urlconstruida;
+        });
+    });
+</script> -->
+<!-- //timeout inactividad -->
+<!-- <script>
+    var runCount = 0;
+    var maxCount = 20; //segundos
+    var idleTime = 0;
+
+    function Timeout_juego() {
+
+        $(this).mousemove(function(e) {
+            runCount = 0;
+        });
+        $(this).click(function(e) {
+            runCount = 0;
+        });
+        if (runCount >= maxCount) {
+            clearInterval(timerId);
+        }
+        if (runCount == maxCount) {
+            OpenDialogTimeOut();
+        }
+        runCount++;
+    }
+
+    var timerId = setInterval(Timeout_juego, 2000);
+    var windowWidth = $(window).width();
+    var windowHeight = $(window).height();
+
+
+    /*$("#dlgAvisoTimeOut").css('display','initial');*/
+    $("#dlgAvisoTimeOut").dialog({
+        autoOpen: false,
+        width: windowWidth,
+        height: windowHeight,
+        modal: true,
+        dialogClass: 'dialogclasscustomJuego',
+        open: function(event, ui) {
+            // $('.ui-widget-content').css('background', 'none');
+
+            idleTime = setTimeout(function() {
+                //$('#dlgAvisoTimeOut').dialog('close')
+                Entorno = RecogeParametros("Entorno");
+                var urlconstruida = "https://terminalmex.cdrsbg.com/";
+                if (Entorno == 0) {
+                    urlconstruida = "http://terminalmexcal.cdrsbg.com/";
+                } else if (Entorno == 2) {
+                    urlconstruida = "http://localhost/";
+                }
+                location.href = urlconstruida;
+            }, 12000);
+
+        },
+        close: function(event, ui) {
+            //no debe de ir
+        },
+        show: {
+            effect: "highlight"
+        },
+        hide: {
+            effect: "highlight"
+        }
+    });
+
+    $(".ui-dialog-title").hide();
+    $(".ui-dialog-titlebar").hide();
+    $(".ui-dialog-buttonset").hide();
+    $(".ui-dialog-buttonpane").hide();
+
+
+    function OpenDialogTimeOut() {
+        $("#dlgAvisoTimeOut").dialog("open");
+    }
+
+    $('#btn-AceptarCustom').click(function() {
+        clearTimeout(idleTime);
+        idleTime = 0;
+
+        Entorno = RecogeParametros("Entorno");
+        var urlconstruida = "https://terminalmex.cdrsbg.com/Menu/";
+        if (Entorno == 0) {
+            urlconstruida = "http://terminalmexcal.cdrsbg.com/Menu/";
+        } else if (Entorno == 2) {
+            urlconstruida = "http://localhost/";
+        }
+        urlconstruida += "?NumeroTarjeta=" + NumeroTarjeta + "&IdSala=" + IdSala + "&NombreSala=" + NombreSala +
+            "&Puesto=" + Puesto + "&IdTerminal=" + IdTerminal + "&ActualizaPuntos=2";
+        location.href = urlconstruida;
+    });
+</script> -->
+
+</html>

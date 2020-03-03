@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Error</title>
+</head>
+<style>
+    html {
+        background: url('img/back-error.jpg');
+        background-image: cover;
+        background-repeat: no-repeat;
+        height: 1080px;
+        width: 1920px;
+        position: absolute;
+    }
+    
+    #centrado {
+        position: absolute;
+        width: 60%;
+        height: 300px;
+        left: 20%;
+        top: 28%;
+    }
+    
+    #jako-error {
+        background: url('img/jako-txt-error.png');
+        background-repeat: no-repeat;
+        height: 827px;
+        width: 1483px;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+<body>
+    <div id="centrado">
+        <div id="jako-error"></div>
+    </div>
+    <script type="text/javascript">
+        setTimeout(function() {
+            //"http://terminalmexcal.cdrsbg.com/"
+            location.href = "http://terminalmexcal.cdrsbg.com/";
+        }, 5000);
+    </script>
+</body>
